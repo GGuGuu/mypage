@@ -84,12 +84,22 @@
             margin-right: 10px;
         }
     </style>
+    <script>
+        $(document).ready(function () {
+            fetch("http://spartacodingclub.shop/sparta_api/weather/seoul").then(res => res.json()).then(data => {
+                $('#temp').empty()
+                let number = data['temp']
+                $('#temp').text(number)
+            })
+        })
+    </script>
 </head>
 
 <body>
     <div class="mytitle">
         <h1>내 생애 최고의 영화들!</h1>
-        <button>영화 기록하기</button>
+        <div>현재 서울의 날씨 : <span id="temp">20</span>도</div>
+        <button onclick="hey()">영화 기록하기</button>
     </div>
     <div class="mypost">
         <div class="form-floating mb-3">
@@ -132,8 +142,8 @@
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="https://w.namu.la/s/100553e43f988cc37824dd9a34edc3f8fd26832347230af1809d0860f3f3bf84071e93eb0bf783d6f7d115b5a376118f522c7bdfe75b021578adbf098d79632c4862989ca4230aeb795e0039aaf9517c01dc4244da8b0d764c3362a5a7901ed318f6bc0e6d89555163925e88853cfe40" class="card-img-top"
-                        alt="...">
+                    <img src="https://w.namu.la/s/100553e43f988cc37824dd9a34edc3f8fd26832347230af1809d0860f3f3bf84071e93eb0bf783d6f7d115b5a376118f522c7bdfe75b021578adbf098d79632c4862989ca4230aeb795e0039aaf9517c01dc4244da8b0d764c3362a5a7901ed318f6bc0e6d89555163925e88853cfe40"
+                        class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">유령</h5>
                         <p class="card-text">나라 팔아 먹은 사람은 그렇게 다치지 않아요, 지키려는 사람이 다치지.</p>
@@ -144,7 +154,8 @@
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="https://w.namu.la/s/e4518552dff291d24661ea0694b239fb1c7421a2f60152da3534456514a68184aabb58498e1e28e126f555735af6eef4dd8b0a3ae7394169f2bc5288a3ad9e289a1e2d3efa63dfd7614686949cfe44db39d4c3c098e1bce80456aa3a10f6e0ea402f41df747b04f74d0ae6d383da0a79" class="card-img-top" alt="...">
+                    <img src="https://w.namu.la/s/e4518552dff291d24661ea0694b239fb1c7421a2f60152da3534456514a68184aabb58498e1e28e126f555735af6eef4dd8b0a3ae7394169f2bc5288a3ad9e289a1e2d3efa63dfd7614686949cfe44db39d4c3c098e1bce80456aa3a10f6e0ea402f41df747b04f74d0ae6d383da0a79"
+                        class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">아바타: 물의 길</h5>
                         <p class="card-text">물의 길은 시작도 끝도 없어. 바다는 네 주위에, 네 안에도 있어.</p>
@@ -156,8 +167,8 @@
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="https://w.namu.la/s/f8de60d4b96ee4b7adb45d743303ac3250e70ca1605065c422d0c5bf877ce3399a0735b74e63df02a7bbb819c48abc70d68170824e195e05a7485c5910ed3a639a5a03adf98b5aacd1f7219e7200bd5e3aa83e339a445503f50364cd337aeb17253c1c5b48c92fd67ac85ad16ecf38d4" class="card-img-top"
-                        alt="...">
+                    <img src="https://w.namu.la/s/f8de60d4b96ee4b7adb45d743303ac3250e70ca1605065c422d0c5bf877ce3399a0735b74e63df02a7bbb819c48abc70d68170824e195e05a7485c5910ed3a639a5a03adf98b5aacd1f7219e7200bd5e3aa83e339a445503f50364cd337aeb17253c1c5b48c92fd67ac85ad16ecf38d4"
+                        class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">부산행</h5>
                         <p class="card-text">놀고들 있네.</p>
